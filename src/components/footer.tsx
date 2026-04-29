@@ -82,10 +82,10 @@ export default function Footer() {
 							<div className="flex items-center space-x-4">
 								<Mail className="flex-shrink-0 w-6 h-6" />
 								<a
-									href="mailto:contact@paradigmclub.co"
+									href="mailto:contact@paradigmclub.tech" //changed to new domain
 									className="text-lg transition-colors"
 								>
-									contact@paradigmclub.co
+									contact@paradigmclub.tech //changed to new domain
 								</a>
 							</div>
 						</div>
@@ -110,6 +110,18 @@ export default function Footer() {
 								<ExternalLink className="w-4 h-4 ml-1" />
 							</a>
 						</div>
+						<div className="flex items-center space-x-2">
+        					<span>Maintained by </span>
+        					<a
+            					href="https://github.com/frostbyte8909" //added my credentials lol
+            					target="_blank"
+            					className="flex items-center text-cyan-400"
+            					rel="noreferrer"
+        					>
+            					Palash
+            					<ExternalLink className="w-4 h-4 ml-1" />
+        					</a>
+    					</div>
 					</div>
 				</div>
 			</div>
