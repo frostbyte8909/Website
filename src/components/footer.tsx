@@ -85,7 +85,7 @@ export default function Footer() {
 									href="mailto:contact@paradigmclub.tech"
 									className="text-lg transition-colors"
 								>
-									contact@paradigmclub.tech //changed to new domain
+									contact@paradigmclub.tech
 								</a>
 							</div>
 						</div>
@@ -98,32 +98,35 @@ export default function Footer() {
 						<p className="text-sm text-[#FCFCFC]/60">
 							© 2025 Paradigm Club | All rights reserved
 						</p>
-						<div className="flex items-center space-x-2 text-sm text-[#FCFCFC]/60">
-							<span>Website crafted with ❤️ by </span>
-							<a
-								href="https://medhanshk.com"
-								target="_blank"
-								className="flex items-center text-cyan-400"
-								rel="noreferrer"
-							>
-								Medhansh
-								<ExternalLink className="w-4 h-4 ml-1" />
-							</a>
+						<div className="flex flex-col items-start space-y-1 text-sm text-[#FCFCFC]/60">
+							<div className="flex items-center space-x-2">
+								<span>Website crafted with ❤️ by </span>
+								<a
+									href="https://medhanshk.com"
+									target="_blank"
+									className="flex items-center text-cyan-400"
+									rel="noreferrer"
+								>
+									Medhansh
+									<ExternalLink className="w-4 h-4 ml-1" />
+								</a>
+							</div>
+							<div className="flex items-center space-x-2">
+								<span>Maintained by </span>
+								<a
+									href="https://github.com/frostbyte8909"
+									target="_blank"
+									className="flex items-center text-cyan-400"
+									rel="noreferrer"
+								>
+									Palash
+									<ExternalLink className="w-4 h-4 ml-1" />
+								</a>
+							</div>
 						</div>
-						<div className="flex items-center space-x-2">
-        					<span>Maintained by </span>
-        					<a
-            					href="https://github.com/frostbyte8909" 
-            					target="_blank"
-            					className="flex items-center text-cyan-400"
-            					rel="noreferrer"
-        					>
-            					Palash
-            					<ExternalLink className="w-4 h-4 ml-1" />
-        					</a>
-    					</div>
 					</div>
 				</div>
+
 			</div>
 		</footer>
 	);
