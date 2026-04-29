@@ -82,7 +82,7 @@ export default function Footer() {
 							<div className="flex items-center space-x-4">
 								<Mail className="flex-shrink-0 w-6 h-6" />
 								<a
-									href="mailto:contact@paradigmclub.tech" //changed to new domain
+									href="mailto:contact@paradigmclub.tech"
 									className="text-lg transition-colors"
 								>
 									contact@paradigmclub.tech //changed to new domain
@@ -113,7 +113,7 @@ export default function Footer() {
 						<div className="flex items-center space-x-2">
         					<span>Maintained by </span>
         					<a
-            					href="https://github.com/frostbyte8909" //added my credentials lol
+            					href="https://github.com/frostbyte8909" 
             					target="_blank"
             					className="flex items-center text-cyan-400"
             					rel="noreferrer"
