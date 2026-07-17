@@ -43,21 +43,39 @@ export function MainPageComponent() {
 
 	return (
 		<div className="min-h-screen bg-[#0F0A0A] text-[#FCFCFC]">
-			{/* BOT2K25 Banner */}
+			{/* BOT 2K26 Banner */}
 			<motion.div
 				initial={{ y: -50, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.6 }}
 				className="bg-[#9AFF27] text-[#0F0A0A] py-2 px-4 text-center text-sm font-medium"
 			>
-				<span>BOT2K25 - Our Annual Tech Fest | July 30th, 2025 | </span>
+				<span>BOT 2K26 - Our Annual Tech Fest | 29 July 2026 | </span>
 				<a
-					href="https://bot.paradigmclub.tech"
+					href="https://docs.google.com/forms/d/e/1FAIpQLSd5JjjyRFfEuKRXaZETUpV0PJjckfFd5SB3ie59vN-Pf0tIjg/viewform?usp=send_form"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="font-bold underline hover:no-underline"
 				>
 					Register Now →
+				</a>
+			</motion.div>
+
+			{/* Cryptic Hunt Banner */}
+			<motion.div
+				initial={{ y: -50, opacity: 0 }}
+				animate={{ y: 0, opacity: 1 }}
+				transition={{ duration: 0.6, delay: 0.15 }}
+				className="bg-[#00F0FF] text-[#0F0A0A] py-2 px-4 text-center text-sm font-medium"
+			>
+				<span>Register for the 2nd edition of our Cryptic Hunt | </span>
+				<a
+					href="https://tally.so/r/pb1WjB"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="font-bold underline hover:no-underline"
+				>
+					Register Here →
 				</a>
 			</motion.div>
 

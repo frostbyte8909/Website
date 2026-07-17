@@ -96,12 +96,12 @@ export function NotFoundPage() {
 							Our Team
 						</a>
 						<a
-							href="https://bot.paradigmclub.tech"
+							href="https://docs.google.com/forms/d/e/1FAIpQLSd5JjjyRFfEuKRXaZETUpV0PJjckfFd5SB3ie59vN-Pf0tIjg/viewform?usp=send_form"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-[#FCFCFC]/80 hover:text-[#9AFF27] transition-colors underline-offset-4 hover:underline"
 						>
-							BOT2K25
+							BOT 2K26
 						</a>
 						<a
 							href="/#membership"
