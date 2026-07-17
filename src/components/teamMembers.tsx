@@ -1,5 +1,4 @@
-import Medhansh from "../../public/medhansh.png";
-import Ayaan from "../../public/ayaan.png";
+import Palash from "../../public/palash.png";
 import Vansh from "../../public/vansh.png";
 import Prathmesh from "../../public/prathmesh.png";
 import abdullah from "../../public/abdullah.png";
@@ -10,23 +9,14 @@ import Ehaan from "../../public/ehaan.png";
 
 export const teamMembers = [
 	{
-		name: "Medhansh Kapoor",
+		name: "Palash Shukla",
 		position: "President",
-		bio: "Lorem ipsum dolor sit amet, i forgot the rest of the lorem ipsum, so here's a placeholder text , also i like to ski with my buddy",
-		image: Medhansh,
-		website: "https://medhanshk.com",
-		github: "https://github.com/whirlxd",
-		twitter: "https://twitter.com/whirlxd",
-		insta: "https://instagram.com/whirlxd",
-		linkedin: "https://linkedin.com/in/medhanshkapoor",
-	},
-	{
-		name: "Ayaan Hashmi",
-		position: "President",
-		bio: "Coder by day and hacker by night, Turning coffee into code",
-		image: Ayaan,
-		github: "https://github.com/ayaan-hashmi",
-		linkedin: "https://www.linkedin.com/in/ayaan-hashmi",
+		bio: "narc",
+		image: Palash,
+		website: "https://palashshukla.me",
+		github: "https://github.com/frostbyte8909",
+		insta: "https://www.instagram.com/palaaaaaashh/",
+		linkedin: "https://www.linkedin.com/in/palash-shukla-neutron",
 	},
 	{
 		name: "Vansh Bhardwaj",

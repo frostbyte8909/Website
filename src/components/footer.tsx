@@ -64,7 +64,7 @@ export default function Footer() {
 									<Phone className="flex-shrink-0 w-6 h-6" />
 									<div>
 										<p className="text-lg">+91 97172 91341</p>
-										<p className="text-sm">(Medhansh Kapoor - President)</p>
+										<p className="text-sm">(Palash Shukla - President)</p>
 									</div>
 								</div>
 							</div>
