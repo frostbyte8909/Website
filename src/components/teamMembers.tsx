@@ -1,5 +1,4 @@
 import Palash from "../../public/palash.png";
-import Vansh from "../../public/vansh.png";
 import Prathmesh from "../../public/prathmesh.png";
 import abdullah from "../../public/abdullah.png";
 import aaradhya from "../../public/aaradhya.png";
@@ -17,16 +16,6 @@ export const teamMembers = [
 		github: "https://github.com/frostbyte8909",
 		insta: "https://www.instagram.com/palaaaaaashh/",
 		linkedin: "https://www.linkedin.com/in/palash-shukla-neutron",
-	},
-	{
-		name: "Vansh Bhardwaj",
-		position: "Vice President",
-		bio: "God's Plan",
-		image: Vansh,
-		website: "https://www.behance.net/madebynoxious",
-		linkedin: "https://www.linkedin.com/in/vansh-bhardwaj-134a07239/",
-		github: "https://github.com/noxindeed",
-		insta: "https://www.instagram.com/vxnshb/",
 	},
 
 	{
