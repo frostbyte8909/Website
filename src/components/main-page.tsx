@@ -328,22 +328,12 @@ export function MainPageComponent() {
 						</button>
 					</div>
 					<div className="space-y-8">
-						{/* Presidents */}
-						<div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-							{(showAlumni ? alumniMembers : teamMembers)
-								.filter((member) => member.position.includes("President"))
-								.slice(0, 2)
-								.map((member, index) => (
-									<TeamMemberCard key={index} member={member} />
-								))}
-						</div>
-						{/* Vice President */}
+						{/* President */}
 						<div className="flex justify-center">
 							{(showAlumni ? alumniMembers : teamMembers)
-								.filter((member) => member.position.includes("Vice President"))
+								.filter((member) => member.position.includes("President"))
 								.slice(0, 1)
 								.map((member, index) => (
-									// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 									<div key={index} className="w-full md:w-1/2">
 										<TeamMemberCard member={member} />
 									</div>
