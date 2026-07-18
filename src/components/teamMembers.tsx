@@ -1,10 +1,4 @@
 import Palash from "../../public/palash.png";
-import Prathmesh from "../../public/prathmesh.png";
-import abdullah from "../../public/abdullah.png";
-import aaradhya from "../../public/aaradhya.png";
-import samarth from "../../public/samarth.png";
-import inesh from "../../public/inesh.png";
-import Ehaan from "../../public/ehaan.png";
 
 export const teamMembers = [
 	{
@@ -17,104 +11,100 @@ export const teamMembers = [
 		insta: "https://www.instagram.com/palaaaaaashh/",
 		linkedin: "https://www.linkedin.com/in/palash-shukla-neutron",
 	},
-
 	{
-		name: "Ehaan Raza Khan",
+		name: "Vansh Bhardwaj",
+		position: "Consultant",
+		bio: "",
+		image: "https://placehold.co/400x400",
+	},
+	{
+		name: "Medhansh Kapoor",
+		position: "Consultant",
+		bio: "",
+		image: "https://placehold.co/400x400",
+	},
+	{
+		name: "Position Open",
 		position: "Head Editing",
-		bio: "I know a little bit about a lot of things. I also make extraordinary , to say the least edits",
-		image: Ehaan,
-		insta: "https://www.instagram.com/ehaanfrfr/",
+		bio: "",
+		image: "https://placehold.co/400x400",
 	},
 	{
-		name: "Prathamesh Prabhakar",
+		name: "Position Open",
 		position: "Head Development",
-		bio: "If there’s a screwdriver in one hand and a gadget in the other, that gadget’s about to meet its insides. My Motto : If it ain't broke, I’ll probably mess with it anyway!",
-		image: Prathmesh,
-		linkedin: "https://linkedin.com/in/brunogg",
-		github: "https://github.com/brunogg69",
-		website: "https://brunogg.in",
+		bio: "",
+		image: "https://placehold.co/400x400",
 	},
-
 	{
-		name: "Abdullah Viqar",
+		name: "Position Open",
 		position: "Head Graphics",
-		bio: "Passionate about tech and design, constantly pushing boundaries to make ideas hit harder. With a camera in one hand and a sketchpad in the other, crafting visuals that don’t just speak—they command attention.",
-		image: abdullah,
-		linkedin: "https://www.linkedin.com/in/abdullahvqr/",
-		insta: "https://www.instagram.com/abdullah.vqr/",
+		bio: "",
+		image: "https://placehold.co/400x400",
 	},
 	{
-		name: "Aaradhya Chaturvedi",
+		name: "Position Open",
 		position: "Head Gaming",
-		bio: "passionate gamer , never back down never what 🗣️",
-		image: aaradhya,
-		linkedin: "http://www.linkedin.com/in/aaradhya-chaturvedi-1304ac",
-		insta: "https://www.instagram.com/aaradhyac_/",
+		bio: "",
+		image: "https://placehold.co/400x400",
 	},
 	{
-		name: "Inesh Agarwal",
+		name: "Position Open",
 		position: "Head AI",
-		bio: "Event planning extraordinaire, passionate about creating memorable tech gatherings.",
-		image: inesh,
-		linkedin: "https://linkedin.com/in/saraht",
-		twitter: "https://twitter.com/saraht",
+		bio: "",
+		image: "https://placehold.co/400x400",
 	},
 	{
-		name: "Samarth Goyal",
+		name: "Position Open",
 		position: "Head CyberSecurity",
-		bio: `Exploring the cyber world with curiosity and zeal,
-    \n
-    Learning to safeguard, innovate, and reveal,
-    \nA student today, a defender tomorrow—driven by purpose and skill.`,
-		image: samarth,
-		linkedin: "http://www.linkedin.com/in/samarthgoyal509",
+		bio: "",
+		image: "https://placehold.co/400x400",
 	},
 	{
 		name: "Position Open",
 		position: "Member",
 		bio: "",
-		image: "https://placehold.co/100x200",
+		image: "https://placehold.co/400x400",
 	},
 	{
 		name: "Position Open",
 		position: "Member",
 		bio: "",
-		image: "https://placehold.co/100x200",
+		image: "https://placehold.co/400x400",
 	},
 	{
 		name: "Position Open",
 		position: "Member",
 		bio: "",
-		image: "https://placehold.co/100x200",
+		image: "https://placehold.co/400x400",
 	},
 	{
 		name: "Position Open",
 		position: "Member",
 		bio: "",
-		image: "https://placehold.co/100x200",
+		image: "https://placehold.co/400x400",
 	},
 	{
 		name: "Position Open",
 		position: "Member",
 		bio: "",
-		image: "https://placehold.co/100x200",
+		image: "https://placehold.co/400x400",
 	},
 	{
 		name: "Position Open",
 		position: "Member",
 		bio: "",
-		image: "https://placehold.co/100x200",
+		image: "https://placehold.co/400x400",
 	},
 	{
 		name: "Position Open",
 		position: "Member",
 		bio: "",
-		image: "https://placehold.co/100x200",
+		image: "https://placehold.co/400x400",
 	},
 	{
 		name: "Position Open",
 		position: "Member",
 		bio: "",
-		image: "https://placehold.co/100x200",
+		image: "https://placehold.co/400x400",
 	},
 ];

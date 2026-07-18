@@ -339,6 +339,16 @@ export function MainPageComponent() {
 									</div>
 								))}
 						</div>
+						{/* Consultants */}
+						{!showAlumni && teamMembers.filter((member) => member.position.includes("Consultant")).length > 0 && (
+							<div className="grid grid-cols-1 gap-8 md:grid-cols-2 mt-8 max-w-4xl mx-auto">
+								{teamMembers
+									.filter((member) => member.position.includes("Consultant"))
+									.map((member, index) => (
+										<TeamMemberCard key={index} member={member} />
+									))}
+							</div>
+						)}
 						{/* Heads */}
 						{!showAlumni && (
 							<div className="grid grid-cols-1 gap-8 md:grid-cols-3 mt-8">
@@ -357,7 +367,8 @@ export function MainPageComponent() {
 									(member) =>
 										showAlumni || (
 											!member.position.includes("President") &&
-											!member.position.includes("Head")
+											!member.position.includes("Head") &&
+											!member.position.includes("Consultant")
 										),
 								)
 								.slice(
@@ -378,7 +389,8 @@ export function MainPageComponent() {
 								teamMembers.filter(
 									(member) =>
 										!member.position.includes("President") &&
-										!member.position.includes("Head"),
+										!member.position.includes("Head") &&
+										!member.position.includes("Consultant")
 								).length > 0 && (
 									<div className="relative col-span-1 sm:col-span-2 md:col-span-4">
 										<div className="absolute inset-0 bg-gradient-to-t from-[#0F0A0A] to-transparent" />
