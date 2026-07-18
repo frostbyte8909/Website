@@ -52,14 +52,14 @@ export function Projects() {
 	};
 
 	return (
-		<div className="min-h-screen bg-[#0F0A0A] text-[#FCFCFC] py-24 px-6 md:px-12 lg:px-24">
+		<div className="min-h-screen bg-[#101010] text-[#FCFCFC] py-24 px-6 md:px-12 lg:px-24">
 			<div className="mx-auto max-w-7xl">
 				<motion.h1
 					initial={{ opacity: 0, y: 50 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
 					viewport={{ once: true }}
-					className="text-5xl md:text-6xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9AFF27] to-cyan-400"
+					className="text-5xl md:text-6xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9AFF27] to-[#108838]"
 				>
 					Our Projects
 				</motion.h1>
@@ -87,7 +87,7 @@ export function Projects() {
 						placeholder="Search projects..."
 						value={filter}
 						onChange={(e) => setFilter(e.target.value)}
-						className="w-full py-3 px-4 pl-12 bg-[#1A1A1A] rounded-lg text-[#FCFCFC] focus:outline-none focus:ring-2 focus:ring-[#9AFF27] transition-all duration-300"
+						className="w-full py-3 px-4 pl-12 bg-[#151515] rounded-lg text-[#FCFCFC] focus:outline-none focus:ring-2 focus:ring-[#9AFF27] transition-all duration-300"
 					/>
 					<Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#FCFCFC]/60" />
 				</motion.div>
@@ -113,10 +113,9 @@ export function Projects() {
 									y: -10,
 									transition: { duration: 0.3 },
 								}}
-								className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1A1A1A] to-[#2A2A2A] p-1"
-							>
-								<div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-[#9AFF27] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-								<div className="relative bg-[#0F0A0A] rounded-xl overflow-hidden">
+							className="group relative overflow-hidden rounded-2xl border border-[#333] hover:border-[#108838] bg-[#151515]"
+						>
+							<div className="relative h-full flex flex-col justify-between z-10">
 									<motion.img
 										whileHover={{ scale: 1.1 }}
 										transition={{ duration: 0.3 }}
@@ -131,7 +130,6 @@ export function Projects() {
 										<div className="flex items-center justify-between mb-4">
 											<h2 className="text-2xl font-bold">{project.name}</h2>
 											<motion.div
-												whileHover={{ rotate: 360 }}
 												transition={{ duration: 0.6 }}
 											>
 												{getIcon(project.type)}
@@ -160,7 +158,7 @@ export function Projects() {
 											href={project.link}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-400 to-[#9AFF27] text-[#0F0A0A] font-semibold rounded-md transform transition-transform duration-300"
+											className="inline-flex items-center px-4 py-2 bg-transparent border border-[#FCFCFC] text-[#FCFCFC] group-hover:bg-[#FCFCFC] group-hover:text-[#101010] font-semibold rounded-md transition-colors duration-300 mt-auto"
 										>
 											View Project <Code className="w-4 h-4 ml-2" />
 										</motion.a>

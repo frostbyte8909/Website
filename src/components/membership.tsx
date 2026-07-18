@@ -11,7 +11,7 @@ export function Membership() {
 		| "code-of-conduct"
 		| "benefits";
 
-	const [activeSection, setActiveSection] = useState<SectionId>("what-we-do");
+	const [activeSection, setActiveSection] = useState<SectionId | null>(null);
 
 	const sections: { id: SectionId; label: string; icon: React.ElementType }[] =
 		[
@@ -63,7 +63,7 @@ export function Membership() {
 	return (
 		<section
 			id="membership"
-			className="min-h-screen bg-[#0F0A0A] text-[#FCFCFC] py-24 px-6 md:px-12 lg:px-24"
+			className="min-h-screen bg-[#101010] text-[#FCFCFC] py-24 px-6 md:px-12 lg:px-24"
 		>
 			<div className="mx-auto max-w-7xl">
 				<motion.h1
@@ -71,7 +71,7 @@ export function Membership() {
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
 					viewport={{ once: true }}
-					className="text-5xl md:text-6xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9AFF27] to-cyan-400"
+					className="text-5xl md:text-6xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9AFF27] to-[#108838]"
 				>
 					Join Us
 				</motion.h1>
@@ -80,7 +80,7 @@ export function Membership() {
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.2 }}
 					viewport={{ once: true }}
-					className="max-w-3xl mx-auto mb-16 text-xl text-center text-cyan-400"
+					className="max-w-3xl mx-auto mb-16 text-xl text-center text-[#FCFCFC]/80"
 				>
 					Embark on a journey of innovation, learning, and collaboration with
 					like-minded tech enthusiasts.
@@ -102,22 +102,22 @@ export function Membership() {
 								y: -5,
 								transition: { duration: 0.3 },
 							}}
-							className={`bg-gradient-to-br from-[#1A1A1A] to-[#2A2A2A] rounded-3xl p-8 transition-all duration-300 cursor-pointer ${
+							className={`bg-[#151515] border border-[#333] hover:border-[#108838] rounded-3xl p-8 cursor-pointer ${
 								activeSection === section.id
-									? "ring-2 ring-cyan-400 shadow-lg shadow-cyan-400/20"
+									? "ring-2 ring-[#108838] shadow-lg shadow-[#108838]/20"
 									: ""
 							}`}
 							onMouseEnter={() => setActiveSection(section.id)}
+							onMouseLeave={() => setActiveSection(null)}
 						>
 							<div className="flex items-center mb-4">
 								<motion.div
-									whileHover={{ rotate: 360 }}
 									transition={{ duration: 0.6 }}
 								>
 									<section.icon
 										className={`w-8 h-8 mr-4 ${
 											activeSection === section.id
-												? "text-cyan-400"
+												? "text-[#108838]"
 												: "text-[#9AFF27]"
 										}`}
 									/>

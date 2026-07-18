@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import TheTeam from "../../public/theteam.png";
+import DiscordLogo from "../../public/discord.png";
 import { motion } from "framer-motion";
 import {
 	ChevronDown,
@@ -8,6 +9,7 @@ import {
 	Globe,
 	Instagram,
 	Linkedin,
+	X,
 } from "lucide-react";
 import { achievements } from "./achievements";
 import { teamMembers } from "./teamMembers";
@@ -17,6 +19,22 @@ export function MainPageComponent() {
 	const [showAlumni, setShowAlumni] = useState(false);
 	const [showAllMembers, setShowAllMembers] = useState(false);
 	const [showAllAlumni] = useState(true);
+	
+	const carouselRef = useRef<HTMLDivElement>(null);
+
+	const handleScroll = () => {
+		if (carouselRef.current) {
+			const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+			// If we scroll to the very end (with a tiny buffer), jump back to the middle
+			if (scrollLeft + clientWidth >= scrollWidth - 10) {
+				carouselRef.current.scrollLeft = scrollWidth / 3;
+			}
+			// If we scroll to the very beginning, jump to the middle
+			if (scrollLeft <= 10) {
+				carouselRef.current.scrollLeft = scrollWidth / 3;
+			}
+		}
+	};
 
 	const containerVariants = {
 		hidden: { opacity: 0 },
@@ -42,47 +60,37 @@ export function MainPageComponent() {
 	};
 
 	return (
-		<div className="min-h-screen bg-[#0F0A0A] text-[#FCFCFC]">
+		<div className="min-h-screen bg-[#101010] text-[#FCFCFC]">
 			{/* BOT 2K26 Banner */}
-			<motion.div
-				initial={{ y: -50, opacity: 0 }}
-				animate={{ y: 0, opacity: 1 }}
-				transition={{ duration: 0.6 }}
-				className="bg-[#9AFF27] text-[#0F0A0A] py-2 px-4 text-center text-sm font-medium"
-			>
-				<span>BOT 2K26 - Our Annual Tech Fest | 29 July 2026 | </span>
+			<div className="bg-[#101010] text-[#9AFF27] py-2 px-4 text-center text-sm font-medium border-b border-[#333]">
+				BOT 2K26 - Our Annual Tech Fest |{" "}
 				<a
 					href="https://docs.google.com/forms/d/e/1FAIpQLSd5JjjyRFfEuKRXaZETUpV0PJjckfFd5SB3ie59vN-Pf0tIjg/viewform?usp=send_form"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="font-bold underline hover:no-underline"
+					className="underline hover:no-underline text-[#9AFF27]"
 				>
-					Register Now →
+					Register Now
 				</a>
-			</motion.div>
+			</div>
 
 			{/* Cryptic Hunt Banner */}
-			<motion.div
-				initial={{ y: -50, opacity: 0 }}
-				animate={{ y: 0, opacity: 1 }}
-				transition={{ duration: 0.6, delay: 0.15 }}
-				className="bg-[#00F0FF] text-[#0F0A0A] py-2 px-4 text-center text-sm font-medium"
-			>
-				<span>Register for the 2nd edition of our Cryptic Hunt | </span>
+			<div className="bg-[#101010] text-[#9AFF27] py-2 px-4 text-center text-sm font-medium border-b border-[#333]">
+				Register for the 2nd edition of our Cryptic Hunt |{" "}
 				<a
 					href="https://tally.so/r/pb1WjB"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="font-bold underline hover:no-underline"
+					className="underline hover:no-underline text-[#9AFF27]"
 				>
-					Register Here →
+					Register Here
 				</a>
-			</motion.div>
+			</div>
 
 			{/* Hero Section */}
 			<section className="relative flex items-center justify-center h-screen overflow-hidden">
 				<div className="absolute inset-0 z-0">
-					<div className="h-full w-full bg-gradient-to-br from-[#0F0A0A] to-[#1A1A1A]">
+					<div className="h-full w-full bg-gradient-to-br from-[#101010] to-[#151515]">
 						<div className="grid w-full h-full grid-cols-12 grid-rows-6">
 							{[...Array(72)].map((_, i) => (
 								<motion.div
@@ -94,7 +102,7 @@ export function MainPageComponent() {
 										duration: 0.5,
 										ease: "easeOut",
 									}}
-									className="border-[0.2px] border-[#9AFF27]/10"
+									className="border-[0.2px] border-[#FCFCFC]/10"
 								/>
 							))}
 						</div>
@@ -108,9 +116,9 @@ export function MainPageComponent() {
 				>
 					<motion.h1
 						variants={itemVariants}
-						className="max-sm:text-5xl text-6xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#9AFF27] to-cyan-400 leading-relaxed"
+						className="max-sm:text-5xl text-6xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#9AFF27] to-[#108838] leading-relaxed"
 					>
-						PARADIGM Club
+						PARADIGM
 					</motion.h1>
 
 					<motion.div
@@ -129,7 +137,7 @@ export function MainPageComponent() {
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 							href="#about"
-							className="px-6 py-3 bg-[#9AFF27] text-[#0F0A0A] font-semibold rounded-md hover:bg-[#8AEF17] transition-colors"
+							className="px-6 py-3 bg-transparent border border-[#FCFCFC] text-[#FCFCFC] font-semibold rounded-md hover:bg-[#FCFCFC] hover:text-[#101010] transition-colors"
 						>
 							Learn More
 						</motion.a>
@@ -137,7 +145,7 @@ export function MainPageComponent() {
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 							href="#team"
-							className="px-6 py-3 bg-cyan-400 text-[#0F0A0A] font-semibold rounded-md hover:bg-cyan-300 transition-colors"
+							className="px-6 py-3 bg-transparent border border-[#FCFCFC] text-[#FCFCFC] font-semibold rounded-md hover:bg-[#FCFCFC] hover:text-[#101010] transition-colors"
 						>
 							The Team
 						</motion.a>
@@ -145,7 +153,7 @@ export function MainPageComponent() {
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 							href="#membership"
-							className="px-6 py-3 max-sm:col-span-2 border-2 border-[#FCFCFC] text-[#FCFCFC] font-semibold rounded-md hover:bg-[#FCFCFC] hover:text-[#0F0A0A] transition-colors"
+							className="px-6 py-3 max-sm:col-span-2 bg-transparent border border-[#FCFCFC] text-[#FCFCFC] font-semibold rounded-md hover:bg-[#FCFCFC] hover:text-[#101010] transition-colors"
 						>
 							Join Us
 						</motion.a>
@@ -156,7 +164,7 @@ export function MainPageComponent() {
 					animate={{ y: [0, 10, 0] }}
 					transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
 				>
-					<ChevronDown className="w-8 h-8 text-cyan-400" />
+					<ChevronDown className="w-8 h-8 text-[#108838]" />
 				</motion.div>
 			</section>
 
@@ -249,7 +257,7 @@ export function MainPageComponent() {
 			</section>
 
 			{/* Achievements Section */}
-			<section className="py-32 bg-[#0F0A0A]/50">
+			<section className="py-32 bg-[#101010]/50">
 				<div className="container mx-auto">
 					<motion.h2
 						initial={{ opacity: 0, y: 50 }}
@@ -260,35 +268,36 @@ export function MainPageComponent() {
 					>
 						Our Accolades
 					</motion.h2>
-					<div className="relative overflow-x-auto">
-						<div className="flex gap-8 pb-4 overflow-x-auto custom-scrollbar">
-							{achievements.map((achievement, index) => (
-								<motion.div
-									key={index}
-									initial={{ opacity: 0, x: -100 }}
-									whileInView={{ opacity: 1, x: 0 }}
-									transition={{ duration: 0.6, delay: index * 0.1 }}
-									viewport={{ once: true }}
-									whileHover={{ scale: 1.05 }}
-									className="flex-shrink-0 w-80 bg-[#FCFCFC]/10 p-6 rounded-lg"
-								>
-									<img
-										loading="lazy"
-										src={achievement.image}
-										alt={achievement.title}
-										width={100}
-										height={100}
-										className="mb-4 rounded h-28 w-28"
-									/>
-									<h3 className="text-xl font-semibold mb-2 text-[#9AFF27]">
-										{achievement.title}
-									</h3>
-									<p className="mb-2 text-sm text-cyan-400">
-										{achievement.date}
-									</p>
-									<p className="text-sm">{achievement.description}</p>
-								</motion.div>
-							))}
+					<div className="relative overflow-hidden py-4">
+						<div
+							ref={carouselRef}
+							onScroll={handleScroll}
+							className="flex gap-8 py-8 px-4 overflow-x-auto"
+							style={{ scrollBehavior: "auto", scrollbarWidth: "none", msOverflowStyle: "none" }}
+						>
+							{/* Duplicate array 3 times to allow seamless looping */}
+							{[...achievements, ...achievements, ...achievements].map(
+								(achievement, index) => (
+									<motion.div
+										key={index}
+										whileHover={{ scale: 1.05 }}
+										className="flex-shrink-0 w-80 bg-[#151515] p-6 rounded-lg border border-[#333] hover:border-[#108838] transition-colors"
+									>
+										<img
+											loading="lazy"
+											src={achievement.image}
+											alt={achievement.title}
+											width={100}
+											height={100}
+											className="mb-4 rounded h-28 w-28"
+										/>
+										<h3 className="text-xl font-semibold mb-2 text-[#FCFCFC]">
+											{achievement.title}
+										</h3>
+										<p className="text-[#FCFCFC]/80">{achievement.description}</p>
+									</motion.div>
+								),
+							)}
 						</div>
 					</div>
 				</div>
@@ -311,7 +320,7 @@ export function MainPageComponent() {
 							type="button"
 							onClick={() => setShowAlumni(false)}
 							className={`px-6 py-2 rounded-l-2xl ${
-								!showAlumni ? "bg-[#9AFF27] text-[#0F0A0A]" : "bg-[#FCFCFC]/10"
+								!showAlumni ? "bg-[#9AFF27] text-[#101010]" : "bg-[#FCFCFC]/10"
 							}`}
 						>
 							Current Team
@@ -321,7 +330,7 @@ export function MainPageComponent() {
 							type="button"
 							onClick={() => setShowAlumni(true)}
 							className={`px-6 py-2 rounded-r-2xl ${
-								showAlumni ? "bg-[#9AFF27] text-[#0F0A0A]" : "bg-[#FCFCFC]/10"
+								showAlumni ? "bg-[#9AFF27] text-[#101010]" : "bg-[#FCFCFC]/10"
 							}`}
 						>
 							Alumni
@@ -393,11 +402,11 @@ export function MainPageComponent() {
 										!member.position.includes("Consultant")
 								).length > 0 && (
 									<div className="relative col-span-1 sm:col-span-2 md:col-span-4">
-										<div className="absolute inset-0 bg-gradient-to-t from-[#0F0A0A] to-transparent" />
+										<div className="absolute inset-0 bg-gradient-to-t from-[#101010] to-transparent" />
 										<button
 											type="button"
 											onClick={() => setShowAllMembers(true)}
-											className="absolute bottom-0 left-1/2 transform -translate-x-1/2 px-6 py-3 bg-[#9AFF27] text-[#0F0A0A] font-semibold rounded-md hover:bg-[#8AEF17] transition-colors flex items-center"
+											className="absolute bottom-0 left-1/2 transform -translate-x-1/2 px-6 py-3 bg-[#9AFF27] text-[#101010] font-semibold rounded-md hover:bg-[#8AEF17] transition-colors flex items-center"
 										>
 											See All Members
 											<ChevronDown className="w-5 h-5 ml-2" />
@@ -422,6 +431,7 @@ interface Member {
 	website?: string;
 	behance?: string;
 	insta?: string;
+	discord?: string;
 }
 
 function TeamMemberCard({ member }: { member: Member }) {
@@ -491,6 +501,16 @@ function TeamMemberCard({ member }: { member: Member }) {
 							className="text-cyan-400 hover:text-[#9AFF27]"
 						>
 							<Instagram className="w-6 h-6" />
+						</a>
+					)}
+					{member.discord && (
+						<a
+							href={member.discord}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-cyan-400 hover:text-[#9AFF27] flex items-center justify-center w-6 h-6"
+						>
+							<img src={DiscordLogo} alt="Discord" className="w-5 h-5 object-contain" />
 						</a>
 					)}
 				</div>

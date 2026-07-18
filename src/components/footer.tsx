@@ -2,7 +2,7 @@ import { Mail, Phone, MapPin, Instagram, ExternalLink } from "lucide-react";
 
 export default function Footer() {
 	return (
-		<footer className="bg-gradient-to-br from-[#0F0A0A] to-[#1A1A1A] text-[#FCFCFC] relative overflow-hidden">
+		<footer className="bg-gradient-to-br from-[#101010] to-[#151515] text-[#FCFCFC] relative overflow-hidden">
 			<div className="absolute inset-0 bg-[url('/footerbg.webp')] bg-cover bg-center opacity-30" />
 			<div className="container relative z-10 px-8 py-20 mx-auto">
 				<div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:gap-24">
@@ -63,7 +63,7 @@ export default function Footer() {
 								<div className="flex items-center space-x-4">
 									<Phone className="flex-shrink-0 w-6 h-6" />
 									<div>
-										<p className="text-lg">+91 97172 91341</p>
+										<p className="text-lg">+91 74286 81717</p>
 										<p className="text-sm">(Palash Shukla - President)</p>
 									</div>
 								</div>

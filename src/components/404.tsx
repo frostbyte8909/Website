@@ -3,10 +3,10 @@ import { Home } from "lucide-react";
 
 export function NotFoundPage() {
 	return (
-		<div className="min-h-screen bg-[#0F0A0A] text-[#FCFCFC] flex items-center justify-center">
+		<div className="min-h-screen bg-[#101010] text-[#FCFCFC] flex items-center justify-center">
 			{/* Background Grid */}
 			<div className="absolute inset-0 z-0">
-				<div className="h-full w-full bg-gradient-to-br from-[#0F0A0A] to-[#1A1A1A]">
+				<div className="h-full w-full bg-gradient-to-br from-[#101010] to-[#151515]">
 					<div className="grid w-full h-full grid-cols-12 grid-rows-6">
 						{[...Array(72)].map((_, i) => (
 							<div
@@ -65,7 +65,7 @@ export function NotFoundPage() {
 				>
 					<a
 						href="/"
-						className="flex items-center gap-2 px-8 py-3 bg-[#9AFF27] text-[#0F0A0A] font-semibold rounded-md hover:bg-[#8AEF17] transition-colors"
+						className="flex items-center gap-2 px-8 py-3 bg-[#9AFF27] text-[#101010] font-semibold rounded-md hover:bg-[#8AEF17] transition-colors"
 					>
 						<Home className="w-5 h-5" />
 						Go Home
