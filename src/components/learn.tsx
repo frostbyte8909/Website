@@ -127,7 +127,7 @@ export function Learn() {
 					initial="hidden"
 					whileInView="visible"
 					viewport={{ once: true }}
-					className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+					className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5"
 				>
 					{domains.map((domain, index) => (
 						<motion.div
@@ -138,11 +138,7 @@ export function Learn() {
 								y: -10,
 								transition: { duration: 0.3 },
 							}}
-							className={`group relative overflow-hidden rounded-2xl border border-[#333] hover:border-[#108838] bg-[#151515] ${
-								index === domains.length - 1 && domains.length % 3 === 1
-									? "lg:col-start-2"
-									: ""
-							}`}
+							className="group relative overflow-hidden rounded-2xl border border-[#333] hover:border-[#108838] bg-[#151515]"
 						>
 							<div className="relative p-6 h-full flex flex-col justify-between z-10">
 								<div>
@@ -152,9 +148,9 @@ export function Learn() {
 										>
 											<domain.icon className="w-10 h-10 mr-4 text-[#9AFF27] group-hover:text-[#108838] transition-colors duration-300" />
 										</motion.div>
-										<h2 className="text-2xl font-bold">{domain.name}</h2>
+										<h2 className="text-lg font-bold leading-tight">{domain.name}</h2>
 									</div>
-									<p className="text-[#FCFCFC]/80 mb-6">{domain.description}</p>
+									<p className="text-[#FCFCFC]/80 mb-6 text-sm line-clamp-3">{domain.description}</p>
 								</div>
 								{domain.link ? (
 									<motion.a
@@ -163,7 +159,7 @@ export function Learn() {
 										href={domain.link}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="inline-block self-start px-4 py-2 bg-transparent border border-[#FCFCFC] text-[#FCFCFC] group-hover:bg-[#FCFCFC] group-hover:text-[#101010] font-semibold rounded-md transition-colors duration-300"
+										className="inline-block self-start px-3 py-1.5 text-sm bg-transparent border border-[#FCFCFC] text-[#FCFCFC] group-hover:bg-[#FCFCFC] group-hover:text-[#101010] font-semibold rounded-md transition-colors duration-300"
 									>
 										Explore
 									</motion.a>
@@ -172,7 +168,7 @@ export function Learn() {
 										whileHover={{ scale: 1.05 }}
 										whileTap={{ scale: 0.95 }}
 										type="button"
-										className="self-start px-4 py-2 bg-transparent border border-[#FCFCFC] text-[#FCFCFC] group-hover:bg-[#FCFCFC] group-hover:text-[#101010] font-semibold rounded-md transition-colors duration-300"
+										className="self-start px-3 py-1.5 text-sm bg-transparent border border-[#FCFCFC] text-[#FCFCFC] group-hover:bg-[#FCFCFC] group-hover:text-[#101010] font-semibold rounded-md transition-colors duration-300"
 									>
 										Explore
 									</motion.button>
