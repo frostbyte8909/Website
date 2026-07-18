@@ -104,7 +104,7 @@ export default function Footer() {
 								<a
 									href="https://medhanshk.com"
 									target="_blank"
-									className="flex items-center text-cyan-400"
+									className="flex items-center text-[#9AFF27] hover:underline"
 									rel="noreferrer"
 								>
 									Medhansh
@@ -112,11 +112,11 @@ export default function Footer() {
 								</a>
 							</div>
 							<div className="flex items-center space-x-2">
-								<span>Maintained by </span>
+								<span>Website maintained by </span>
 								<a
 									href="https://github.com/frostbyte8909"
 									target="_blank"
-									className="flex items-center text-cyan-400"
+									className="flex items-center text-[#9AFF27] hover:underline"
 									rel="noreferrer"
 								>
 									Palash
