@@ -72,7 +72,7 @@ export const teamMembers = [
 	},
 	{
 		name: "Position Open",
-		position: "Head CyberSecurity",
+		position: "Head Cybersecurity",
 		bio: "",
 		image: "https://placehold.co/400x400",
 	},
