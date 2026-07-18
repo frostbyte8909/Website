@@ -96,7 +96,7 @@ export default function Footer() {
 				<div className="mt-20 pt-8 border-t border-[#FCFCFC]/10">
 					<div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
 						<p className="text-sm text-[#FCFCFC]/60">
-							© 2025 Paradigm Club | All rights reserved
+							© 2026 Paradigm Club | All rights reserved
 						</p>
 						<div className="flex flex-col items-start space-y-1 text-sm text-[#FCFCFC]/60">
 							<div className="flex items-center space-x-2">
