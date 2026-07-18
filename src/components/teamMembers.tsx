@@ -15,6 +15,12 @@ export const teamMembers = [
 		discord: "https://discord.com/users/815876064378617907",
 	},
 	{
+		name: "Position Open",
+		position: "Vice President",
+		bio: "",
+		image: "https://placehold.co/400x400",
+	},
+	{
 		name: "Vansh Bhardwaj",
 		position: "Consultant",
 		bio: "",
