@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import TheTeam from "../../public/theteam.png";
 import DiscordLogo from "../../public/discord.png";
+import DiscordLogoHover from "../../public/discord-hover.png";
 import { motion } from "framer-motion";
 import {
 	ChevronDown,
@@ -507,9 +508,10 @@ function TeamMemberCard({ member }: { member: Member }) {
 							href={member.discord}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="text-cyan-400 hover:text-[#9AFF27] flex items-center justify-center w-6 h-6"
+							className="flex items-center justify-center w-6 h-6 group"
 						>
-							<img src={DiscordLogo} alt="Discord" className="w-5 h-5 object-contain" />
+							<img src={DiscordLogo} alt="Discord" className="w-5 h-5 object-contain group-hover:hidden" />
+							<img src={DiscordLogoHover} alt="Discord" className="w-5 h-5 object-contain hidden group-hover:block" />
 						</a>
 					)}
 				</div>
