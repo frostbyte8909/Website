@@ -138,7 +138,11 @@ export function Learn() {
 								y: -10,
 								transition: { duration: 0.3 },
 							}}
-							className="group relative overflow-hidden rounded-2xl border border-[#333] hover:border-[#108838] bg-[#151515]"
+							className={`group relative overflow-hidden rounded-2xl border border-[#333] hover:border-[#108838] bg-[#151515] ${
+								index === domains.length - 1 && domains.length % 3 === 1
+									? "lg:col-start-2"
+									: ""
+							}`}
 						>
 							<div className="relative p-6 h-full flex flex-col justify-between z-10">
 								<div>
