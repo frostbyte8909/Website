@@ -54,6 +54,7 @@ const domains = [
 		icon: Search,
 		description:
 			"Solve puzzles and decipher clues in challenging hunts that require logical thinking and attention to detail.",
+		link: "https://docs.google.com/document/d/1aDiHtg4kQYeQlgNpbFi4ou71cM0g5r3gQ7PzKaZz114/edit?usp=sharing",
 	},
 	{
 		name: "Graphic Design",
@@ -151,14 +152,27 @@ export function Learn() {
 									</div>
 									<p className="text-[#FCFCFC]/80 mb-6">{domain.description}</p>
 								</div>
-								<motion.button
-									whileHover={{ scale: 1.05 }}
-									whileTap={{ scale: 0.95 }}
-									type="button"
-									className="self-start px-4 py-2 bg-transparent border border-[#FCFCFC] text-[#FCFCFC] group-hover:bg-[#FCFCFC] group-hover:text-[#101010] font-semibold rounded-md transition-colors duration-300"
-								>
-									Explore
-								</motion.button>
+								{domain.link ? (
+									<motion.a
+										whileHover={{ scale: 1.05 }}
+										whileTap={{ scale: 0.95 }}
+										href={domain.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="inline-block self-start px-4 py-2 bg-transparent border border-[#FCFCFC] text-[#FCFCFC] group-hover:bg-[#FCFCFC] group-hover:text-[#101010] font-semibold rounded-md transition-colors duration-300"
+									>
+										Explore
+									</motion.a>
+								) : (
+									<motion.button
+										whileHover={{ scale: 1.05 }}
+										whileTap={{ scale: 0.95 }}
+										type="button"
+										className="self-start px-4 py-2 bg-transparent border border-[#FCFCFC] text-[#FCFCFC] group-hover:bg-[#FCFCFC] group-hover:text-[#101010] font-semibold rounded-md transition-colors duration-300"
+									>
+										Explore
+									</motion.button>
+								)}
 							</div>
 						</motion.div>
 					))}
