@@ -353,7 +353,7 @@ export function MainPageComponent() {
 							{!showAlumni && teamMembers
 								.filter((member) => member.position === "Vice President")
 								.map((member, index) => (
-									<div key={index} className="w-full md:w-1/2">
+									<div key={index} className="w-full md:w-[27rem]">
 										<TeamMemberCard member={member} />
 									</div>
 								))}
