@@ -330,7 +330,7 @@ export function MainPageComponent() {
 					<div className="space-y-8">
 						{/* President */}
 						<div className="flex justify-center">
-							{(showAlumni ? alumniMembers : teamMembers)
+							{!showAlumni && teamMembers
 								.filter((member) => member.position.includes("President"))
 								.slice(0, 1)
 								.map((member, index) => (
@@ -340,21 +340,25 @@ export function MainPageComponent() {
 								))}
 						</div>
 						{/* Heads */}
-						<div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-							{(showAlumni ? alumniMembers : teamMembers)
-								.filter((member) => member.position.includes("Head"))
-								.slice(0, 9)
-								.map((member, index) => (
-									<TeamMemberCard key={index} member={member} />
-								))}
-						</div>
-						{/* Other Members */}
-						<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
+						{!showAlumni && (
+							<div className="grid grid-cols-1 gap-8 md:grid-cols-3 mt-8">
+								{teamMembers
+									.filter((member) => member.position.includes("Head"))
+									.slice(0, 9)
+									.map((member, index) => (
+										<TeamMemberCard key={index} member={member} />
+									))}
+							</div>
+						)}
+						{/* Other Members / Alumni Grid */}
+						<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 mt-8">
 							{(showAlumni ? alumniMembers : teamMembers)
 								.filter(
 									(member) =>
-										!member.position.includes("President") &&
-										!member.position.includes("Head"),
+										showAlumni || (
+											!member.position.includes("President") &&
+											!member.position.includes("Head")
+										),
 								)
 								.slice(
 									0,
