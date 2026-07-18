@@ -102,7 +102,7 @@ export function Membership() {
 								y: -5,
 								transition: { duration: 0.3 },
 							}}
-							className={`bg-[#151515] border border-[#333] hover:border-[#108838] rounded-3xl p-8 cursor-pointer ${
+							className={`bg-[#151515] border border-[#333] hover:border-[#108838] rounded-3xl p-6 cursor-pointer ${
 								activeSection === section.id
 									? "ring-2 ring-[#108838] shadow-lg shadow-[#108838]/20"
 									: ""
@@ -115,16 +115,16 @@ export function Membership() {
 									transition={{ duration: 0.6 }}
 								>
 									<section.icon
-										className={`w-8 h-8 mr-4 ${
+										className={`w-6 h-6 mr-3 ${
 											activeSection === section.id
 												? "text-[#108838]"
 												: "text-[#9AFF27]"
 										}`}
 									/>
 								</motion.div>
-								<h2 className="text-2xl font-bold">{section.label}</h2>
+								<h2 className="text-xl font-bold">{section.label}</h2>
 							</div>
-							<p className="text-lg leading-relaxed">{content[section.id]}</p>
+							<p className="text-base leading-relaxed break-words whitespace-normal">{content[section.id]}</p>
 						</motion.div>
 					))}
 				</motion.div>
