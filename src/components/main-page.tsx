@@ -63,26 +63,26 @@ export function MainPageComponent() {
 	return (
 		<div className="min-h-screen bg-[#101010] text-[#FCFCFC]">
 			{/* BOT 2K26 Banner */}
-			<div className="bg-[#101010] text-[#9AFF27] py-2 px-4 text-center text-sm font-medium border-b border-[#333]">
+			<div className="bg-[#9AFF27] text-[#101010] py-2 px-4 text-center text-sm font-medium border-b border-[#333]">
 				BOT 2K26 - Our Annual Tech Fest |{" "}
 				<a
 					href="https://docs.google.com/forms/d/e/1FAIpQLSd5JjjyRFfEuKRXaZETUpV0PJjckfFd5SB3ie59vN-Pf0tIjg/viewform?usp=send_form"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="underline hover:no-underline text-[#9AFF27]"
+					className="underline hover:no-underline text-[#101010]"
 				>
 					Register Now
 				</a>
 			</div>
 
 			{/* Cryptic Hunt Banner */}
-			<div className="bg-[#101010] text-[#9AFF27] py-2 px-4 text-center text-sm font-medium border-b border-[#333]">
+			<div className="bg-[#9AFF27] text-[#101010] py-2 px-4 text-center text-sm font-medium border-b border-[#333]">
 				Register for the 2nd edition of our Cryptic Hunt |{" "}
 				<a
 					href="https://tally.so/r/pb1WjB"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="underline hover:no-underline text-[#9AFF27]"
+					className="underline hover:no-underline text-[#101010]"
 				>
 					Register Here
 				</a>
