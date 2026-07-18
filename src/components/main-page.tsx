@@ -341,8 +341,17 @@ export function MainPageComponent() {
 						{/* President */}
 						<div className="flex justify-center">
 							{!showAlumni && teamMembers
-								.filter((member) => member.position.includes("President"))
-								.slice(0, 1)
+								.filter((member) => member.position === "President")
+								.map((member, index) => (
+									<div key={index} className="w-full md:w-1/2">
+										<TeamMemberCard member={member} />
+									</div>
+								))}
+						</div>
+						{/* Vice President */}
+						<div className="flex justify-center mt-8">
+							{!showAlumni && teamMembers
+								.filter((member) => member.position === "Vice President")
 								.map((member, index) => (
 									<div key={index} className="w-full md:w-1/2">
 										<TeamMemberCard member={member} />
