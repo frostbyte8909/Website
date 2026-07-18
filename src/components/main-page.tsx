@@ -444,7 +444,9 @@ function TeamMemberCard({ member }: { member: Member }) {
 					alt={member.name}
 					width={400}
 					height={400}
-					className="object-cover w-full h-64 md:h-full"
+					className={`object-cover w-full h-64 md:h-full ${
+						(member as any).imageClass || ""
+					}`}
 				/>
 			</div>
 			<div className="w-full md:w-[65%] p-6 flex flex-col justify-between">

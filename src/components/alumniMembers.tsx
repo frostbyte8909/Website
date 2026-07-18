@@ -27,6 +27,7 @@ export const alumniMembers = [
 		position: "Former Vice President '25",
 		bio: "God's Plan",
 		image: Vansh,
+		imageClass: "object-right",
 		website: "https://www.behance.net/madebynoxious",
 		linkedin: "https://www.linkedin.com/in/vansh-bhardwaj-134a07239/",
 		github: "https://github.com/noxindeed",
