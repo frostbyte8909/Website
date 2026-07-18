@@ -9,7 +9,6 @@ import {
 	Globe,
 	Instagram,
 	Linkedin,
-	X,
 } from "lucide-react";
 import { achievements } from "./achievements";
 import { teamMembers } from "./teamMembers";
