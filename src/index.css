@@ -20,7 +20,15 @@ html, body {
 	scrollbar-width: none;  /* Firefox */
 }
 *::-webkit-scrollbar {
-	display: none; /* Chrome, Safari and Opera */
+	height: 2px;
+	width: 2px;
+}
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: #108838;
+	border-radius: 20px;
 }
 @keyframes marquee {
 	0% { transform: translateX(0%); }

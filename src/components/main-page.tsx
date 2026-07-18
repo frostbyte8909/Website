@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import TheTeam from "../../public/theteam.png";
 import DiscordLogo from "../../public/discord.png";
 import DiscordLogoHover from "../../public/discord-hover.png";
@@ -21,20 +22,20 @@ export function MainPageComponent() {
 	const [showAllAlumni] = useState(true);
 	
 	const carouselRef = useRef<HTMLDivElement>(null);
+	const { ref: startRef, inView: startInView } = useInView();
+	const { ref: endRef, inView: endInView } = useInView();
 
-	const handleScroll = () => {
-		if (carouselRef.current) {
-			const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-			// If we scroll to the very end (with a tiny buffer), jump back to the middle
-			if (scrollLeft + clientWidth >= scrollWidth - 10) {
-				carouselRef.current.scrollLeft = scrollWidth / 3;
-			}
-			// If we scroll to the very beginning, jump to the middle
-			if (scrollLeft <= 10) {
-				carouselRef.current.scrollLeft = scrollWidth / 3;
-			}
+	useEffect(() => {
+		if (startInView && carouselRef.current) {
+			carouselRef.current.scrollLeft = carouselRef.current.scrollWidth / 3;
 		}
-	};
+	}, [startInView]);
+
+	useEffect(() => {
+		if (endInView && carouselRef.current) {
+			carouselRef.current.scrollLeft = carouselRef.current.scrollWidth / 3;
+		}
+	}, [endInView]);
 
 	const containerVariants = {
 		hidden: { opacity: 0 },
@@ -91,21 +92,20 @@ export function MainPageComponent() {
 			<section className="relative flex items-center justify-center h-screen overflow-hidden">
 				<div className="absolute inset-0 z-0">
 					<div className="h-full w-full bg-gradient-to-br from-[#101010] to-[#151515]">
-						<div className="grid w-full h-full grid-cols-12 grid-rows-6">
-							{[...Array(72)].map((_, i) => (
-								<motion.div
-									key={i}
-									initial={{ opacity: 0, scale: 0.8 }}
-									animate={{ opacity: 1, scale: 1 }}
-									transition={{
-										delay: i * 0.01,
-										duration: 0.5,
-										ease: "easeOut",
-									}}
-									className="border-[0.2px] border-[#FCFCFC]/10"
-								/>
-							))}
-						</div>
+						<motion.svg
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{ duration: 1.5, ease: "easeOut" }}
+							className="absolute inset-0 w-full h-full"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<defs>
+								<pattern id="hero-grid" width="8.333%" height="16.666%" patternUnits="userSpaceOnUse">
+									<rect width="100%" height="100%" fill="none" stroke="rgba(252,252,252,0.1)" strokeWidth="0.4" />
+								</pattern>
+							</defs>
+							<rect width="100%" height="100%" fill="url(#hero-grid)" />
+						</motion.svg>
 					</div>
 				</div>
 				<motion.div
@@ -271,10 +271,10 @@ export function MainPageComponent() {
 					<div className="relative overflow-hidden py-4">
 						<div
 							ref={carouselRef}
-							onScroll={handleScroll}
-							className="flex gap-8 py-8 px-4 overflow-x-auto"
+							className="flex gap-8 py-8 px-4 overflow-x-auto relative"
 							style={{ scrollBehavior: "auto", scrollbarWidth: "none", msOverflowStyle: "none" }}
 						>
+							<div ref={startRef} className="w-1 shrink-0 bg-transparent" />
 							{/* Duplicate array 3 times to allow seamless looping */}
 							{[...achievements, ...achievements, ...achievements].map(
 								(achievement, index) => (
@@ -298,6 +298,7 @@ export function MainPageComponent() {
 									</motion.div>
 								),
 							)}
+							<div ref={endRef} className="w-1 shrink-0 bg-transparent" />
 						</div>
 					</div>
 				</div>
