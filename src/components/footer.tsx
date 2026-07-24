@@ -104,7 +104,7 @@ export default function Footer() {
 								<a
 									href="https://medhanshk.com"
 									target="_blank"
-									className="flex items-center text-[#9AFF27] hover:underline"
+									className="flex items-center text-cyan-400 hover:underline"
 									rel="noreferrer"
 								>
 									Medhansh
@@ -116,7 +116,7 @@ export default function Footer() {
 								<a
 									href="https://github.com/frostbyte8909"
 									target="_blank"
-									className="flex items-center text-[#9AFF27] hover:underline"
+									className="flex items-center text-cyan-400 hover:underline"
 									rel="noreferrer"
 								>
 									Palash
